@@ -284,6 +284,9 @@ const transitionDuration = prefixStyle('transitionDuration')
       },
       getLyric() {
         this.currentSong.getLyric().then((lyric) => {
+          if (this.currentlyric !== lyric) {
+            return
+          }
           this.currentlyric = new Lyric(lyric, this.handleLyric)
           if (this.playing) {
             this.currentlyric.play()
