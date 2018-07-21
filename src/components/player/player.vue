@@ -203,6 +203,7 @@ const transitionDuration = prefixStyle('transitionDuration')
         }
         if (this.playList.length === 1) {
           this.loop()
+          return
         }
         else {
           let index = this.currentIndex - 1
@@ -228,6 +229,7 @@ const transitionDuration = prefixStyle('transitionDuration')
         }
         if (this.playList.length === 1) {
           this.loop()
+          return
         }
         else {
           let index = this.currentIndex + 1
